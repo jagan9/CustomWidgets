@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Light Button</title>
+  <!-- styling -->
+  <style type="text/css">
+    *{
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+    .container{
+      display: flex;
+      height: 100vh;
+      background-color: #042104;
+      justify-content: center;
+      align-items: center;
+      animation: myaan 10s linear infinite;
+    } 
+    .circle{
+      position: relative;
+      height: 120px;
+      width: 120px; 
+    }
+    .circle p{
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 100%;
+      width: 100%;
+      transform: rotate(calc(20deg * var(--i)));
+    }
+    .circle p::before{
+      content: "";
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      background-color: #00ff0a;
+      height: 15px;
+      width: 15px;
+      border-radius: 50%;
+      transition: 0.5s;
+      box-shadow: 0px 0px 10px #00ff0a,
+                  0px 0px 20px #00ff0a,
+                  0px 0px 40px #00ff0a,
+                  0px 0px 60px #00ff0a,
+                  0px 0px 80px #00ff0a;
+      animation: mydfdfff 2s linear infinite;
+      animation-delay: calc(0.1s * var(--i))
+    }
+    .circle:hover{
+      visibility: hidden;
+    }
+    @keyframes myaan {
+      0%{
+        filter: hue-rotate(0deg);
+      }
+      100%{
+        filter: hue-rotate(100deg);
+      }  
+    }@keyframes mydfdfff {
+      0%{
+        transform:scale(1);
+      }
+      100%{
+        transform: scale(0);
+      }
+      
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="circle">
+    <p style="--i:1;"></p>
+    <p style="--i:2;"></p>
+    <p style="--i:3;"></p>
+    <p style="--i:4;"></p>
+    <p style="--i:5;"></p>
+    <p style="--i:6;"></p>
+    <p style="--i:7;"></p>
+    <p style="--i:8;"></p>
+    <p style="--i:9;"></p>
+    <p style="--i:10;"></p>
+    <p style="--i:11;"></p>
+    <p style="--i:12;"></p>
+    <p style="--i:13;"></p>
+    <p style="--i:14;"></p>
+    <p style="--i:15;"></p>
+    <p style="--i:16;"></p>
+    <p style="--i:17;"></p>
+    <p style="--i:18;"></p>
+    <p style="--i:19;"></p>
+    <p style="--i:20;"></p>
+  </div>
+  </div>
+</body>
+</html>
